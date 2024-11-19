@@ -1,0 +1,9 @@
+langchain_community
+langchain_openai
+langchain_core
+streamlit
+bs4
+python-dotenv
+openai
+chromadb
+PyPDF2

@@ -19,9 +19,12 @@ from langchain.vectorstores import Chroma
 
 
 
-pdf_folder = r"C:\Users\treja\OneDrive\Documents\UB\Projects\RAGaws"
+pdf_folder = "/home/ec2-user/Langchain-based-RAG/Data/PDFs"
+# Ensure the folder exists
+if not os.path.exists(pdf_folder):
+    raise FileNotFoundError(f"PDF folder not found: {pdf_folder}")
 # Use glob to retrieve all PDF paths from the folder
-pdf_paths = glob.glob(f"{pdf_folder}\\*.pdf")
+pdf_paths = glob.glob(f"{pdf_folder}/*.pdf")
 
 # Extract text from all PDFs
 docs = []
